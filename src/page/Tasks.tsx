@@ -4,6 +4,7 @@ import {useSelector} from "react-redux";
 import {RootState} from "../app/store";
 import {useQuery} from "react-query";
 import {Task} from "../data/init-data";
+import TaskForm from "./TaskForm";
 
 const Tasks = () => {
     const isLoggedIn = useSelector((state: RootState) => state.login.value);
@@ -17,6 +18,7 @@ const Tasks = () => {
         {isError && <div className="alert alert-danger">{error as String}</div>}
         {isLoading && <div className="alert alert-danger">loading</div>}
         {data && <TaskList tasks={data as Array<Task>}/>}
+        <TaskForm />
     </div>
 };
 

@@ -6,6 +6,7 @@ import Tasks from "./page/Tasks";
 import Header from "./component/ui/Header";
 import TaskDetail from "./page/TaskDetail";
 import {QueryClient, QueryClientProvider} from "react-query";
+import TaskForm from "./page/TaskForm";
 
 const queryClient = new QueryClient()
 
